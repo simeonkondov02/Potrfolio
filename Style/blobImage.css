@@ -1,0 +1,90 @@
+.blob_image {
+  display: inline-block;
+  width: 40vw;
+  height: 40vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob_layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M891%2C619Q827%2C738%2C727.5%2C816.5Q628%2C895%2C500%2C895Q372%2C895%2C247%2C835Q122%2C775%2C92%2C637.5Q62%2C500%2C85.5%2C358Q109%2C216%2C228.5%2C124.5Q348%2C33%2C492%2C57.5Q636%2C82%2C766.5%2C146.5Q897%2C211%2C926%2C355.5Q955%2C500%2C891%2C619Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22rgba(255%2C80%2C80%2C1)%22 d=%22M891%2C619Q827%2C738%2C727.5%2C816.5Q628%2C895%2C500%2C895Q372%2C895%2C247%2C835Q122%2C775%2C92%2C637.5Q62%2C500%2C85.5%2C358Q109%2C216%2C228.5%2C124.5Q348%2C33%2C492%2C57.5Q636%2C82%2C766.5%2C146.5Q897%2C211%2C926%2C355.5Q955%2C500%2C891%2C619Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+
+
+.blob_layer:first-of-type {
+  transform: scale(0.95);
+  opacity: 1;
+  animation: img_blob_main 10s linear infinite;
+  animation-delay: 0s;
+  background-image: url("../Resurces/blob.png");
+}
+
+.blob_layer:nth-of-type(2) {
+  transform: translateY(-1%) translateX(-1%) rotate(90deg);
+  opacity: .75;
+  animation: img_blob2 7s linear infinite;
+  animation-delay: -2s;
+  z-index: -1;
+}
+
+.blob_layer:last-of-type {
+  transform: translateY(1%) translateX(1%) rotate(0deg);
+  opacity: .5;
+  animation: img_blob3 5s linear infinite;
+  animation-delay: -4s;
+  z-index: -2;
+}
+
+
+
+@keyframes img_blob_main {
+  0% {
+    transform: scale(0.95, 0.95);
+  }
+  50% {
+    transform: scale(1, 0.90);
+  }
+  100% {
+    transform: scale(0.95, 0.95);
+  }
+}
+
+
+@keyframes img_blob2 {
+  0% {
+    transform: translateY(-1%) translateX(-1%) rotate(90deg);
+  }
+  50% {
+    transform: translateY(1%) translateX(1%)  rotate(270deg);
+  }
+  100% {
+    transform: translateY(-1%) translateX(-1%) rotate(90deg);
+  }
+}
+
+@keyframes img_blob3 {
+  0% {
+    transform: translateY(1%) translateX(1%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-1%) translateX(-1%) rotate(-180deg);
+  }
+  100% {
+    transform: translateY(1%) translateX(1%) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 100vh) {
+  .blob_image {
+    display: inline-block;
+    width: 100vw;
+    height: 100vw;
+  }
+}

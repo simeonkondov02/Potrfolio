@@ -1,0 +1,114 @@
+#footer {
+  margin-top: 16vw;
+}
+
+#footer_content {
+  display: inline-block;
+  width: 100vw;
+  height: fit-content;
+  background-image: linear-gradient(
+                    180deg,
+                    var(--blue),
+                    var(--green));
+}
+
+#footer_content aside {
+  display: inline-grid;
+  height: 30vh;
+  display: inline-grid;
+  place-items: center;
+}
+
+#footer_left_container {
+  display: inline-grid;
+  width: 30%;
+  place-items: center;
+  float: left;
+  padding-right: 2vw;
+}
+
+#footer_right_container {
+  display: inline-grid;
+  width: 70%;
+  place-items: center;
+  float: right;
+}
+
+#footer_image {
+  width: 10vh;
+  border-radius: 50%;
+}
+
+#footer_title {
+  display: inline-block;
+  width: 100%;
+  font-size: 6vh;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  text-align: right;
+  color: white;
+  user-select: none;
+}
+
+#contact_links_list {
+  display: inline-grid;
+  width: 100%;
+  grid-template-areas: "c1 c2 c3 c4";
+  align-items: flex-start;
+}
+
+.contact_link:first-of-type { grid-area: c1 }
+.contact_link:nth-of-type(2) { grid-area: c2 }
+.contact_link:nth-of-type(3) { grid-area: c3 }
+.contact_link:last-of-type { grid-area: c4 }
+
+.contact_link {
+  display: inline;
+  position: relative;
+  margin: 1vw 4vh;
+}
+
+.contact_link img {
+  width: 3.4vh;
+  position: absolute;
+  left: -4vh;
+  background-color: white;
+  border: solid .5vh white;
+  border-radius: .6vh;
+}
+
+.contact_link a {
+  font-family: 'Poppins', cursive;
+  font-size: 2.4vh;
+  color: white;
+}
+
+.contact_link a:hover {
+  text-decoration:underline;
+}
+
+@media screen and (max-width: 150vh) {
+  #contact_links_list {
+    width: fit-content;
+    grid-template-areas: "c2 c3" "c1 c4";
+  }
+}
+
+@media screen and (max-width: 100vh) {
+  #footer_content aside {
+    height: fit-content;
+  }
+  #footer_right_container, #footer_left_container {
+    width: 90%;
+    float: left;
+    margin: 1vh 5%;
+  }
+  #footer_right_container {
+    margin-bottom: 5vh;
+  }
+  #footer_title { text-align: center }
+  #contact_links_list {
+    width: fit-content;
+    grid-template-areas: "c1" "c2" "c3" "c4";
+  }
+}

@@ -1,0 +1,29 @@
+#download_pdf {
+  display: none;
+  position: relative;
+  height: 20vh;
+  place-items: center;
+  padding-bottom: 10vh;
+}
+
+/* #download_pdf::after {
+  display: inline-block;
+  width: 100vw;
+  height: .1vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-image: linear-gradient(
+                    45deg,
+                    rgba(0, 0, 0, 0),
+                    var(--blue),
+                    var(--green),
+                    rgba(0, 0, 0, 0));
+} */
+
+@media screen and (max-width: 170vh) {
+  #download_pdf {
+    display: inline-grid;
+  }
+}

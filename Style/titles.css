@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+
+.title {
+  font-size: 9vh;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-weight: normal;
+  user-select: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--blue);
+}
+
+.title span {
+  font-size: 10vh;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-weight: normal;
+  user-select: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--green);
+  text-shadow: white 2px 2px 0;
+}
+
+.white {
+  color: white;
+}
+
+.paragraph_title {
+  font-size: 3vh;
+  font-family: 'Jost', sans-serif;
+  font-weight: normal;
+  font-weight: lighter;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+@media screen and (max-width: 130vh) {
+  .title {
+    font-size: 7.5vh;
+  }
+  .white {
+    color: var(--blue);
+  }
+}

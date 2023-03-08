@@ -1,0 +1,53 @@
+.main_container {
+  display: inline-block;
+  width: 100vw;
+  height: fit-content;
+}
+
+.lr_content {
+  display: inline-block;
+  width: 100vw;
+  height: fit-content;
+}
+
+.lr_content .right, .lr_content .left {
+  display: inline-grid;
+  width: 50vw;
+  height: 100%;
+  place-items: center;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.filled {
+  display: inline-block;
+  width: 100vw;
+  height: 50vh;
+  background-image: linear-gradient(
+                    180deg,
+                    var(--blue),
+                    var(--green));
+                    animation: wave_1 15s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+@media screen and (max-width: 100vh) {
+  .lr_content {
+    display: inline-block;
+    width: 100vw;
+    height: fit-content;
+  }
+
+  .lr_content .right, .lr_content .left {
+    display: inline-block;
+    width: 100vw;
+    height: fit-content;
+  }
+}

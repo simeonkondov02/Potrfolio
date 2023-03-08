@@ -1,0 +1,84 @@
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: url("../Resurces/wave.png");
+  background-size: 100vh 10vh;
+  transform: scale(1, 1.1);
+  overflow: hidden;
+}
+
+.wave_container {
+  position: relative;
+}
+
+#title_wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1
+}
+
+#title_wave .wave {
+  filter: brightness(400%);
+}
+
+.wave_container .wave_1
+{
+  animation: wave_1 15s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+@keyframes wave_1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100vh;
+  }
+}
+
+.wave_container .wave_2
+{
+  animation: wave_2 10s linear infinite;
+  opacity: 0.75;
+  animation-delay: -4s;
+  bottom: -1vh;
+  clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 9vh);
+}
+
+@keyframes wave_2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -100vh;
+  }
+}
+
+.wave_container .wave_3
+{
+  animation: wave_3 5s linear infinite;
+  opacity: 0.5;
+  animation-delay: -2s;
+  bottom: -2vh;
+  clip-path: polygon(0 0, 100% 0, 100% 8vh, 0 8vh);
+}
+
+@keyframes wave_3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100vh;
+  }
+}
+
+@media screen and (max-width: 100vh) {
+  #title_wave {
+    display: none;
+  }
+}

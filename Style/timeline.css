@@ -1,0 +1,286 @@
+#experiance_edication {
+  margin-top: 10vh;
+}
+
+.timeline_container {
+  width: 120%;
+  height: 50vw;
+  margin-left: -20%;
+  z-index: 1 !important;
+}
+
+.events_container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline {
+  display: inline-grid;
+  width: 10%;
+  height: 80vh;
+  place-items: center;
+  margin: 5% 45%;
+}
+
+.timeline_line {
+  display: inline-grid;
+  width: 2vh;
+  height: 100%;
+  position: relative;
+  place-items: center;
+  border-radius: 1vh;
+  background-color: var(--green);
+}
+
+.event_point {
+  display: inline-block;
+  width: 2vh;
+  height: 2vh;
+  position: absolute;
+  border-radius: 1vh;
+  outline: solid .5vh white;
+  background-color: var(--green);
+  transition: .5s;
+}
+
+.event_point:hover {
+  transform: scale(1.1);
+  background-color: var(--blue5);
+}
+
+.event_point::before, .event_point::after {
+  display: inline-block;
+  width: 2vh;
+  height: 2vh;
+  position: absolute;
+  top: -.5vh;
+  left: -.5vh;
+  visibility: hidden;
+  border-radius: 2vh;
+  border: solid .5vh white;
+  background-color: var(--blue);
+  transition: .5s;
+  z-index: 2;
+  content: "";
+}
+
+.event_point::before {
+  height: 2vh;
+  top: -.5vh;
+}
+
+.event_point::after {
+  height: 2vh;
+  top: -.5vh;
+}
+
+.event_point:first-of-type:hover::before {
+  visibility: visible;
+  top: -15vh;
+  height: 15vh;
+}
+
+.event_point:first-of-type:hover::after {
+  visibility: visible;
+  height: 20vh;
+}
+
+.event_point:nth-of-type(3):hover::before {
+  visibility: visible;
+  top: -19vh;
+  height: 19vh;
+}
+
+.event_point:nth-of-type(3):hover::after {
+  visibility: visible;
+  height: 44vh;
+}
+
+.event_point:nth-of-type(2):hover::before {
+  visibility: visible;
+  top: -9vh;
+  height: 9vh;
+}
+
+.event_point:nth-of-type(2):hover::after {
+  visibility: visible;
+  height: 31vh;
+}
+
+.event_point:last-of-type:hover::after {
+  visibility: visible;
+  height: 5vh;
+}
+
+
+.event_point:hover .direction_left {
+  background-image: linear-gradient(
+                    90deg,
+                    var(--background_green) 0%,
+                    var(--green5) 100%);
+}
+
+.event_point:hover .direction_right {
+  background-image: linear-gradient(
+                    270deg,
+                    var(--background_green) 0%,
+                    var(--green5) 100%);
+}
+
+.first_from_4 {
+  top: 20%;
+}
+
+.second_from_4
+{
+  top: 40%;
+}
+
+.third_from_4 {
+  bottom: 40%;
+}
+
+.last_from_4 {
+  bottom: 20%;
+}
+
+.event_note {
+  display: inline-block;
+  width: 50vh;
+  height: 20vh;
+  border-radius: .6vh;
+  transition: 3s !important;
+}
+
+.direction_left {
+  position: absolute;
+  top: -9vh;
+  left: -52vh;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+  background-image: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, .1),
+                    var(--background_green) 75%,
+                    var(--green5) 100%);
+
+  transform: translateX(40%) rotateY(89deg);
+}
+
+.direction_right {
+  position: absolute;
+  top: -9vh;
+  left: 4vh;
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
+  background-image: linear-gradient(
+                    270deg,
+                    var(--background_green) 75%,
+                    var(--green5) 100%);
+
+  transform: translateX(-40%) rotateY(-89deg);
+}
+
+.direction_right .note_content, .direction_left .note_content
+{
+  display: inline-grid;
+  width: 75%;
+  height: 100%;
+  align-items: center;
+}
+
+.direction_right .note_content {
+  float: right;
+  text-align: left;
+}
+
+.direction_left .note_content {
+  float: left;
+  text-align: right;
+}
+
+.note_title {
+  font-size: 2.4vh;
+  font-family: 'Rowdies', cursive;
+  font-weight: bold;
+  text-transform: full-width;
+  color: var(--dark_green);
+}
+
+.note_title span {
+  font-size: 2vh;
+  font-family: 'Rowdies', cursive;
+  font-weight: bold;
+  text-transform: full-width;
+  color: var(--green);
+}
+
+.note_year {
+  font-size: 3vh;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  opacity: .8;
+  text-shadow: 0 0 1vh var(--green);
+  transition: .7s;
+}
+
+.event_point:hover .event_note .note_content .note_year {
+  font-size: 3.4vh;
+  opacity: 1;
+}
+
+@media screen and (max-width: 170vh) {
+  .timeline_container {
+    width: 100vw;
+    height: fit-content;
+    margin-left: -50vw;
+    margin-top: 20vh;
+    transform: scale(0.9);
+    z-index: 1 !important;
+  }
+  .timeline { height: 70vh; }
+}
+
+@media screen and (max-width: 100vh) {
+  .timeline_container {
+    width: 100vw;
+    height: fit-content;
+    margin-left: -46vw;
+    z-index: 1 !important;
+  }
+  .timeline { height: 90vh; }
+
+  .first_from_4 { top: 10%; }
+
+  .second_from_4 { top: 36%; }
+
+  .third_from_4 { bottom: 36%; }
+
+  .last_from_4 { bottom: 10%; }
+
+  .direction_right { left: 3vh; }
+
+  .direction_left {
+    top: -9vh;
+    left: 3vh;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
+    background-image: linear-gradient(
+                      270deg,
+                      var(--background_green) 75%,
+                      var(--green5) 100%);
+
+    transform: translateX(-40%) rotateY(-89deg);
+  }
+
+  .direction_left .note_content {
+    float: right;
+    text-align: left;
+  }
+
+  .event_point:hover {
+    transform: scale(1);
+  }
+
+  .event_point:hover::after, .event_point::before {
+    display: none;
+  }
+}

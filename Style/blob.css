@@ -1,0 +1,104 @@
+.blob {
+  display: inline-block;
+  width: 40vw;
+  height: 40vw;
+}
+
+.blob path {
+  fill: var(--blue);
+  transform: translateY(50%) translateX(50%) rotate(0deg);
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+.blob path:nth-of-type(2) {
+  fill: var(--blue);
+  transform: translateY(50%) translateX(50%) rotate(90deg);
+  opacity: .75;
+  animation-delay: -2s;
+  z-index: -1;
+}
+
+.blob path:last-of-type {
+  fill: var(--green);
+  transform: translateY(52%) translateX(52%) rotate(0deg);
+  opacity: .5;
+  animation-delay: -4s;
+  z-index: -2;
+}
+
+.onload path {
+  animation: blob1 10s linear infinite;
+}
+
+.onload path:nth-of-type(2) {
+  animation: blob2 7s linear infinite;
+}
+
+.onload path:last-of-type {
+  animation: blob3 5s linear infinite;
+}
+
+.onhover:hover path {
+  animation: blob1 10s linear infinite;
+}
+
+.onhover:hover path:nth-of-type(2) {
+  animation: blob2 7s linear infinite;
+}
+
+.onhover:hover path:last-of-type {
+  animation: blob3 5s linear infinite;
+}
+
+@keyframes blob1 {
+  0% {
+    transform: translateY(50%) translateX(50%) rotate(0deg);
+    fill: var(--blue);
+  }
+  50% {
+    transform: translateY(50%) translateX(50%) rotate(180deg);
+    fill: var(--green);
+  }
+  100% {
+    transform: translateY(50%) translateX(50%) rotate(00deg);
+    fill: var(--blue);
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    transform: translateY(52%) translateX(52%) rotate(90deg);
+    fill: var(--green);
+  }
+  50% {
+    transform: translateY(48%) translateX(48%) rotate(270deg);
+    fill: var(--blue);
+  }
+  100% {
+    transform: translateY(52%) translateX(52%) rotate(90deg);
+    fill: var(--green);
+  }
+}
+
+@keyframes blob3 {
+  0% {
+    transform: translateY(52%) translateX(52%) rotate(0deg);
+    fill: var(--green);
+  }
+  50% {
+    transform: translateY(48%) translateX(48%) rotate(-180deg);
+    fill: var(--blue);
+  }
+  100% {
+    transform: translateY(52%) translateX(52%) rotate(0deg);
+    fill: var(--breen);
+  }
+}
+
+@media screen and (max-width: 130vh) {
+  .blob {
+    width: 100vw;
+    height: 100vw;
+  }
+}

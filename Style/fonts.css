@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-size: 2vh;
+  font-family: 'Roboto';
+  color: black;
+}
+
+.gradient_text {
+  background-image: linear-gradient(
+                    45deg,
+                    var(--dark_orange),
+                    var(--dark_red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.text {
+  text-align: justify;
+}

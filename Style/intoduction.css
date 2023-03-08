@@ -1,0 +1,93 @@
+#intoduction {
+  display: inline-grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.intoduction_container {
+  display: inline-block;
+  width: 60vw;
+  height: 100%;
+  position: relative;
+  margin: 5vw 0vw;
+}
+
+.intro_img {
+  width: 40vh;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 30%;
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
+}
+
+.img_shadow {
+  display: inline-block;
+  width: 41vh;
+  height: 100%;
+  position: absolute;
+  top: -1vh;
+  left: -1vh;
+  border-top-left-radius: 47%;
+  border-bottom-left-radius: 29%;
+  box-shadow: inset 4vw 0 2vw 1vw white;
+}
+
+.intro_text_container {
+  display: inline-block;
+  width: 40vw;
+  height: 40vh;
+  position: absolute;
+  top: 5vh;
+  left: 38vh;
+  padding: 2vh;
+  border-radius: 1vh;
+  border: solid .1vh #ddd;
+  border-left: 0px;
+  background-color: #fdfdfd;
+}
+
+.intro_text_container::before {
+  display: inline-block;
+  width: 4vh;
+  height: 10vh;
+  position: absolute;
+  left: -3.9vh;
+  top: 9vh;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background-color: white;
+  content: "";
+}
+
+.intro_text {
+  font-family: 'Inconsolata';
+  font-size: 3vh;
+  color: #aaa;
+}
+
+.intro_text a {
+  font-family: 'Inconsolata';
+  font-size: 3vh;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.intro_text:hover a {
+  color: var(--green);
+}
+
+.intro_text span {
+  font-size: 6vh;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: normal;
+  font-weight: normal;
+  user-select: none;
+  text-align: center;
+  color: var(--blue);
+}
+
+@media screen and (max-width: 100vh) {
+  .intoduction_container {
+    display: none;
+  }
+}

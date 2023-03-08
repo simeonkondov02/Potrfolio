@@ -1,0 +1,54 @@
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.from_left2 {
+  transform: translateX(-100%);
+  transition: 2s all ease;
+}
+
+.from_left15 {
+  transform: translateX(-100%);
+  transition: 1.5s all ease;
+}
+
+.from_left1 {
+  transform: translateX(-100%);
+  transition: 1s all ease;
+}
+
+.from_left05 {
+  transform: translateX(-100%);
+  transition: .5s all ease;
+}
+
+.from_right2 {
+  transform: translateX(100%);
+  transition: 2s all ease;
+}
+
+.from_right15 {
+  transform: translateX(100%);
+  transition: 1.5s all ease;
+}
+
+.from_right1 {
+  transform: translateX(100%);
+  transition: 1s all ease;
+}
+
+.from_right05 {
+  transform: translateX(100%);
+  transition: .5s all ease;
+}
+
+.rotate {
+  transform: translateX(0) rotateY(0deg);
+}
+
+.reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}

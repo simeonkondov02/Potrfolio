@@ -1,0 +1,88 @@
+.sideblob {
+  display: inline-block;
+  width: 65vw;
+  height: 60vw;
+  position: absolute;
+  top: -5vw;
+  left: 0;
+  clip-path: polygon(0 5vw, 100% 5vw, 100% 55vw, 0 55vw);
+  z-index: -1;
+}
+
+.sideblob path {
+  fill: var(--blue);
+  transform: translateY(50%) translateX(17%) scale(1.7, -1);
+  opacity: 1;
+  animation: sideblob1 4s linear infinite;
+  animation-delay: 0s;
+}
+
+.sideblob path:nth-of-type(2) {
+  fill: var(--green);
+  transform: translateY(49%) translateX(17%) scale(1.7, -1) rotate(-4deg);
+  opacity: .75;
+  animation: sideblob2 14s linear infinite;
+  animation-delay: -2s;
+  z-index: -1;
+}
+
+.sideblob path:last-of-type {
+  fill: var(--green);
+  transform: translateY(52%) translateX(17%) scale(1.7, -1) rotate(2deg);
+  opacity: .5;
+  animation: sideblob3 10s linear infinite;
+  animation-delay: -4s;
+  z-index: -2;
+}
+
+@keyframes sideblob1 {
+  0% {
+    transform: translateY(50%) translateX(17%) scale(1.7, -1) rotate(0deg);
+    fill: var(--blue);
+  }
+  50% {
+    transform: translateY(50%) translateX(19%) scale(1.7, -1) rotate(0deg);
+    fill: var(--green);
+  }
+  100% {
+    transform: translateY(50%) translateX(17%) scale(1.7, -1) rotate(0deg);
+    fill: var(--blue);
+  }
+}
+
+@keyframes sideblob2 {
+  0% {
+    transform: translateY(49%) translateX(17%) scale(1.7, -1) rotate(-4deg);
+    fill: var(--green);
+  }
+  50% {
+    transform: translateY(50%) translateX(19%) scale(1.7, -1) rotate(-4deg);
+    fill: var(--blue);
+  }
+  100% {
+    transform: translateY(49%) translateX(17%) scale(1.7, -1) rotate(-4deg);
+    fill: var(--green);
+  }
+}
+
+@keyframes sideblob3 {
+  0% {
+    transform: translateY(52%) translateX(17%) scale(1.7, -1) rotate(2deg);
+    fill: var(--green);
+  }
+  50% {
+    transform: translateY(50%) translateX(19%) scale(1.7, -1) rotate(2deg);
+    fill: var(--blue);
+  }
+  100% {
+    transform: translateY(52%) translateX(17%) scale(1.7, -1) rotate(2deg);
+    fill: var(--green);
+  }
+}
+
+
+@media screen and (max-width: 170vh) {
+  .sideblob {
+    display: none;
+  }
+}

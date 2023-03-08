@@ -1,0 +1,375 @@
+.more_details_container {
+  display: inline-block;
+  width: 90vw;
+  height: 90vh;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  border-radius: 2vh;
+  background-color: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(2vh);
+  overflow: hidden;
+  z-index: 100 !important;
+}
+
+#project_details {
+  transform: scale(0%);
+}
+
+#project_screenshots {
+  display: inline-block;
+  height: 55vh;
+  width: 45vw;
+  position: absolute;
+  left: -18vw;
+  bottom: 0;
+  background-image: url("../Resurces/Screenshots/CSEE Prop Tech Pladform.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1 !important;
+}
+
+.project_video_container {
+  display: inline-grid;
+  width: 90vw;
+  height: 80vh;
+  position: relative;
+  place-items: center;
+}
+
+.project_video {
+  position: absolute;
+  height: 10vw;
+  transform: rotateY(-180deg);
+  border-radius: .4vh;
+  box-shadow: 0px 0px 1vh .4vh rgba(255, 255, 255, .9);
+  opacity: 1;
+  transition: .95s;
+}
+
+
+.go_from_right {
+  animation: go_from_right 1s ease-in-out 1;
+  z-index: 1;
+  margin-left: 0;
+  opacity: 1;
+  transform: scale(3) rotateY(0deg);
+}
+
+@keyframes go_from_right {
+  0% {
+    margin-left: 0;
+    transform: scale(1) rotateY(-180deg);
+  }
+  50% {
+    margin-left: 80vw;
+    transform: scale(2) rotateY(-90deg);
+  }
+  100% {
+    margin-left: 0;
+    transform: scale(3) rotateY(0deg);
+  }
+}
+
+.go_left {
+  animation: go_left 1s ease-in-out 1;
+  z-index: -1;
+  margin-right: 0;
+  opacity: 0;
+  transform: scale(1) rotateY(180deg);
+}
+
+@keyframes go_left {
+  0% {
+    margin-right: 0;
+    transform: scale(3) rotateY(0deg);
+  }
+  50% {
+    margin-right: 80vw;
+    transform: scale(2) rotateY(90deg);
+  }
+  100% {
+    margin-right: 0;
+    transform: scale(1) rotateY(180deg);
+  }
+}
+
+.go_from_left {
+  animation: go_from_left 1s ease-in-out 1;
+  z-index: 1;
+  margin-left: 0;
+  opacity: 1;
+  transform: scale(3) rotateY(0deg);
+}
+
+@keyframes go_from_left {
+  0% {
+    margin-right: 0;
+    transform: scale(1) rotateY(-180deg);
+  }
+  50% {
+    margin-right: 80vw;
+    transform: scale(2) rotateY(-90deg);
+  }
+  100% {
+    margin-right: 0;
+    transform: scale(3) rotateY(0deg);
+  }
+}
+
+.go_right {
+  animation: go_right 1s ease-in-out 1;
+  z-index: -1;
+  margin-right: 0;
+  opacity: 0;
+  transform: scale(1) rotateY(180deg);
+}
+
+@keyframes go_right {
+  0% {
+    margin-left: 0;
+    transform: scale(3) rotateY(0deg);
+  }
+  50% {
+    margin-left: 80vw;
+    transform: scale(2) rotateY(90deg);
+  }
+  100% {
+    margin-left: 0;
+    transform: scale(1) rotateY(180deg);
+  }
+}
+
+#prev_btn, #next_btn {
+  display: inline-grid;
+  height: 7vh;
+  width: 7vh;
+  position: absolute;
+  place-items: center;
+  box-shadow: 0px 0px 1vh .3vh rgba(255, 255, 255, .9);
+  border-radius: 50%;
+  transition: .3s;
+  z-index: 102;
+}
+
+#prev_btn img {
+  width: 60%;
+  position: absolute;
+  left: 15%;
+}
+
+
+#next_btn img {
+  width: 60%;
+  position: absolute;
+  left: 25%;
+}
+
+#prev_btn {
+  top: 35vh;
+  left: 1vh;
+  border-radius: 50%;
+  transition: .3s;
+  background-color: var(--blue);
+}
+
+#next_btn {
+  top: 35vh;
+  right: 1vh;
+  background-color: var(--green);
+}
+
+#prev_btn:hover {
+  background-color: var(--blue5);
+  backdrop-filter: blur(1vh);
+  box-shadow: 0px 0px 1vh .3vh rgba(255, 255, 255, .5);
+}
+
+#next_btn:hover {
+  background-color: var(--green5);
+  backdrop-filter: blur(1vh);
+  box-shadow: 0px 0px 1vh .3vh rgba(255, 255, 255, .5);
+}
+
+.project_skils_contaner {
+  display: inline-grid;
+  width: 40vh;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  right: 5vh;
+  place-items: center;
+  z-index: 100;
+}
+
+.project_skils_contaner div {
+  display: inline-block;
+  height: fit-content;
+  position: relative;
+}
+
+.project_skills_list {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  margin-left: 30vh;
+  margin-top: -10vh !important;
+  text-align: left;
+  opacity: 0;
+  transition: 1.4s;
+}
+
+.show_skill {
+  display: inline-block !important;
+  margin-left: -10vh !important;
+  opacity: 1;
+}
+
+.project_skills_list li {
+  position: relative;
+  margin: 2vh 1vh;
+}
+
+.project_skills_list li p {
+  display: inline;
+  position: absolute;
+  top: 1.5vh;
+  left: 7vh;
+  margin-bottom: 10vh;
+  font-size: 3vh;
+}
+
+.long_skill_name {
+  top: -.5vh !important;
+}
+
+.project_skills_list div {
+  display: inline-grid;
+  width: 6vh;
+  height: 6vh;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+.project_skills_list div img {
+  width: 4vh;
+}
+
+#project_title {
+  position: absolute;
+  margin: 0 4vh;
+  font-size: 8vh;
+  background-color: white;
+  box-shadow: 0px 0px 2vh 2.7vh rgba(255, 255, 255, 1);
+  border-radius: 30%;
+  z-index: 104;
+}
+
+.project_links {
+  display: inline-grid;
+  width: 46vh;
+  height: 2vh;
+  position: fixed;
+  bottom: 13vh;
+  left: 35vw;
+  place-items: center;
+  box-shadow: 0px 0px 3vh 6vh rgba(255, 255, 255, 1);
+  border-radius: 70%;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 105;
+}
+
+#github_link {
+  display: inline-block;
+  width: 8vh;
+  height: 8vh;
+  position: absolute;
+  top: -2vh;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--blue);
+  transition: .3s;
+}
+
+#github_link:hover {
+  background-color: var(--green);
+}
+
+#github_link img {
+  display: inline-block;
+  width: 80%;
+  margin: 10% 12% 10% 8%;
+}
+
+#visit_side_btn {
+  height: 8vh;
+  position: absolute;
+  top: -2vh;
+  right: 0;
+  border-radius: 4vh;
+}
+
+#back_link {
+  display: inline-grid;
+  width: 16vh;
+  height: 8vh;
+  position: absolute;
+  top: -2vh;
+  right: -18vh;
+  place-items: center;
+  border-radius: 4vh;
+  background-color: #F3F3F3;
+  color: var(--blue);
+  font-size: 1.6vh;
+  font-family: 'Rowdies', cursive;
+  text-transform: uppercase;
+  letter-spacing: .4vh;
+  transition: .3s;
+}
+
+#back_link:hover {
+  background-color: var(--blue);
+  color: white;
+  cursor: pointer;
+}
+
+#close_btn {
+  display: inline-grid;
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .15s;
+  z-index: 105;
+}
+
+#close_btn img {
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  transition: .3s;
+}
+
+#close_btn:hover {
+  background-color: var(--green);
+}
+
+#close_btn:hover img {
+  width: 60%;
+  height: 60%;
+  filter: brightness(200%);
+}
+
+@media screen and (max-width: 100vh) {
+  #project_details {
+    display: none;
+  }
+}

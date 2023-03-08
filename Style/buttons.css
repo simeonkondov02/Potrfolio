@@ -1,0 +1,154 @@
+.button_with_icon {
+  display: inline-grid;
+  width: 30vh;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.button_with_icon * {
+  transition: .3s;
+  font-family: 'Rowdies', cursive;
+  font-size: 3vh;
+}
+
+.button_with_icon:hover .button_circle {
+  -webkit-box-shadow: 0px 0px 2vh 0 #ddd;
+  box-shadow: 0px 0px 2vh 0 #ddd;
+}
+
+.button_with_icon:hover .button_on_hover_text {
+  visibility: visible;
+  opacity: 1;
+  width: 40vh;
+  color: var(--green);
+}
+
+.button_with_icon:hover .button_outside_text {
+  display: none;
+  transition: .2s;
+}
+
+.button_circle {
+  display: inline-grid;
+  width: 8vh;
+  height: 8vh;
+  place-items: center;
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 0 0 #ddd;
+  box-shadow: 0px 0px 0 0 #ddd;
+  transition: .5s;
+  z-index: 1;
+}
+
+.button_circle img {
+  width: 70%;
+  height: 70%;
+}
+
+.button_on_hover_text {
+  display: inline-grid;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: -1vh;
+  left: -1vh;
+  place-items: center;
+  padding-left: 4vh;
+  color: rgba(255, 255, 255, 0);
+  visibility: hidden;
+  border-radius: 5vh;
+  background-color: white;
+  transform: .2s;
+  opacity: 0;
+}
+
+.button_outside_text {
+  display: inline-block;
+  width: 30vh;
+  position: absolute;
+  left: 10vh;
+  color: white;
+}
+
+button {
+  width: 36vh;
+  padding: 2vh 4vh;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border: none;
+  border-radius: .5vh;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+button:hover .Wave {
+  top: -40vh;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.6vh;
+  font-family: 'Rowdies', cursive;
+  text-transform: uppercase;
+  letter-spacing: .4vh;
+}
+
+button .Wave {
+  width: 36vh;
+  height: 36vh;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  top: -14vh;
+  transition: 0.4s;
+  transform: rotate(180deg);
+}
+
+button .Wave::before, button .Wave::after {
+  width: 200%;
+  height: 200%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+button .Wave::before {
+  border-radius: 45%;
+  background-color: var(--green5);
+
+  animation: Wave 5s linear infinite;
+}
+button .Wave::after {
+  border-radius: 40%;
+  background-color: var(--green);
+  animation: Wave 10s linear infinite;
+}
+
+@keyframes Wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+ }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+ }
+}
+
+@media screen and (max-width: 100vh) {
+  button {
+    width: 90vw;
+    margin: 1.5vw 5vw;
+  }
+  button .Wave {
+    width: 90vw;
+    height: 32vh;
+  }
+}

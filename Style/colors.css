@@ -1,0 +1,22 @@
+:root {
+  /* --orange: rgba(255, 102, 26, 1);
+  --red: rgba(255, 80, 80, 1);
+  --background_orange: rgba(255, 102, 26, .03);
+  --background_red: rgba(255, 80, 80, .03);
+  --dark_orange: rgba(102, 34, 0, 1);
+  --dark_red: rgba(102, 0, 0, 1);
+  --gray: rgba(0, 0, 0, .2);
+  --background_gray: rgba(0, 0, 0, 1); */
+
+  --green: rgb(136, 211, 206);
+  --green5: rgba(136, 211, 206, .5);
+  --green: rgb(136, 211, 206, .90);
+  --dark_green: rgb(21, 55, 53);
+  --blue: rgb(110, 69, 226);
+  --blue5: rgba(110, 69, 226, .5);
+  --dark_blue: rgb(33, 13, 89);
+  --background_green: rgba(136, 211, 206, .1);
+  --background_blue: rgba(110, 69, 226, .03);
+  --gray: rgba(0, 0, 0, .2);
+  --background_gray: rgba(0, 0, 0, 1);
+}

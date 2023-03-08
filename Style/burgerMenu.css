@@ -1,0 +1,37 @@
+#burger_menu_box {
+  display: none;
+  width: 6vh;
+  height: 6vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.burger_line {
+  display: inline-block;
+  width: 4.5vh;
+  height: .3vh;
+  position: absolute;
+  left: 0;
+  border-radius: .3vh;
+  background-color: var(--red);
+  transition: .3s;
+}
+
+#l1 {
+  top: 1.5vh;
+}
+
+#l2 {
+  top: 3vh;
+}
+
+#l3 {
+  top: 4.5vh;
+}
+
+@media screen and (max-width: 100vh) {
+  #burger_menu_box {
+    display: inline-block;
+  }
+}
